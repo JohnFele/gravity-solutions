@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 116, 139, 0.5) rgba(30, 41, 59, 0.5);
+}
+
+@theme {
+  --color-primary: #f57123;
+  --color-accent1: #0e264b;
+  --color-accent2: #343d4b;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-reverse: float-reverse 7s ease-in-out infinite;
+  --animate-spin-slow: spin 20s linear infinite;
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    },
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes float-reverse {
+    0%, 100% {
+      transform: translateY(0);
+    },
+    50% {
+      transform: translateY(20px);
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-accent2 text-white;
+  }
+}

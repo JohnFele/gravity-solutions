@@ -1,0 +1,9 @@
+[[headers]]
+  for = "/login"
+  [headers.values]
+    Cross-Origin-Opener-Policy = "unsafe-none"
+
+[[headers]]
+  for = "/signup"
+  [headers.values]
+    Cross-Origin-Opener-Policy = "unsafe-none"
